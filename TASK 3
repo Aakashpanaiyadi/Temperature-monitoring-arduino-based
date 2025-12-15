@@ -1,12 +1,9 @@
 #include <LiquidCrystal.h>
 #include <math.h>
-
-const int sensorPin = A0;  // Thermistor connected to A0
-const float BETA = 3950;   // Beta value for NTC Thermistor
-
+const int sensorPin = A0;  
+const float BETA = 3950;  
 // Initialize the LCD (RS, E, D4, D5, D6, D7)
 LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
-
 void setup() {
     lcd.begin(16, 2);  // Initialize 16x2 LCD
     lcd.setCursor(0, 0);
@@ -14,17 +11,14 @@ void setup() {
     delay(2000);
     lcd.clear();
 }
-
 void loop() {
     int analogValue = analogRead(sensorPin);
     float resistance = (1023.0 / analogValue - 1) * 10000;  // Calculate resistance
     float temperatureC = 1 / (log(resistance / 10000) / BETA + 1 / 298.15) - 273.15; // Convert to Celsius
-
     lcd.setCursor(0, 0);
     lcd.print("Temp: ");
     lcd.print(temperatureC);
     lcd.print(" C");
-
-    delay(1000);  // Update every second
+    delay(1000); 
 }
 
