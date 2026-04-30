@@ -1,11 +1,6 @@
-# CODETECH-IT-SOLUTION--TEMPERATURE-MONITORING-SYSTEM--
-## **Project: Temperature Monitoring System Using Arduino and LCD**  
-NAME : Aakash P
-COMPANY : CODETECH IT SOLUTIONS
-ID : CT08DKX
-DOMAIN : Embedded systems
-DURATION : December 12th 2024 to janauary 12 2025
-MENTOR : Neela Santhosh
+
+Temperature Monitoring System Using Arduino and LCD
+
 
 ### **Objective**  
 The objective of this project is to design a **temperature monitoring system** using an **Arduino Uno, NTC thermistor, and a 16x2 LCD display**. The system continuously measures the temperature and displays the real-time temperature readings on an LCD screen, making it useful for **home automation, industrial monitoring, and weather stations**.  
